@@ -14,12 +14,10 @@
     <div class="container">
         <h1 class="heading">GETBUS</h1>
     </div>
-    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta libero nobis molestiae
-        repudiandae
-        sit consectetur quod id amet praesentium quasi aperiam perferendis et dicta adipisci, odio autem tempore nemo
-        temporibus eligendi asperiores? Quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia sapiente
-        molestiae voluptatum veniam, rerum reiciendis quidem illum. Illum laudantium perferendis est molestias iure iste
-        nesciunt vel dolorum doloribus. A commodi enim ad earum.</p>
+    <p class="para">let it be followed that the things of the present are like an opening to bear and receive the words, but no one at the time hates them';
+         'tougher picking times? Which. The company itself is a very successful company. For because he is wise';
+         'I am sorry for the trouble of pleasures, by rejecting him indeed. He who praises him is to bear the trouble of this right';
+         'they do not even know the pains of pain. For from the advantages to theirs.</p>
     <a class="link" href="login_page.html">Login/Sign-up</a>
     <section>
         All rights reserved

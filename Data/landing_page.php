@@ -150,6 +150,14 @@
     <form action="passenger info.php" method="post" class="secondform">
         <?php
         if (isset($_POST['submit'])) {
+
+            $envVarMARIADB_HOST = getenv('MARIADB_HOST');
+            $envVarMARIADB_PASSWORD = getenv('MARIADB_PASSWORD');
+            $envVarMARIADB_USER = getenv('MARIADB_USER');
+            $envVarMARIADB_DB = getenv('MARIADB_DB');
+    
+         
+
             $frm = $_POST['src_name'];
             $to = $_POST['to_name'];
 
@@ -157,7 +165,7 @@
             $_SESSION["to"] = $_POST['to_name'];
             $_SESSION["dt"] = $_POST['date_name'];
 
-            $db = mysqli_connect('localhost', 'root', '', 'online_bus') or die("Could not connect to Database");
+            $db = mysqli_connect('$envVarMARIADB_HOST', '$envVarMARIADB_USER', '$envVarMARIADB_PASSWORD', '$envVarMARIADB_DB') or die("Could not connect to Database");
 
             $querry = "SELECT * FROM bus_details WHERE source='$frm' AND destination='$to'";
 

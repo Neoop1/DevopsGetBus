@@ -2,7 +2,12 @@
 $name = $_POST['eml'];
 $pswrd = $_POST['pass'];
 
-$db=mysqli_connect('localhost','root','','online_bus') or die("Could not connect to Database");
+$envVarMARIADB_HOST = getenv('MARIADB_HOST');
+$envVarMARIADB_PASSWORD = getenv('MARIADB_PASSWORD');
+$envVarMARIADB_USER = getenv('MARIADB_USER');
+$envVarMARIADB_DB = getenv('MARIADB_DB');
+
+$db=mysqli_connect( $envVarMARIADB_HOST ,$envVarMARIADB_USER ,$envVarMARIADB_PASSWORD ,$envVarMARIADB_DB) or die("Could not connect to Database");
 
 $querry = "SELECT * FROM user__details WHERE email='$name' AND password='$pswrd'";
 $result= mysqli_query($db, $querry) or die("Could not execute querry");

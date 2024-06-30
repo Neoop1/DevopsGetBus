@@ -89,12 +89,16 @@
         // print("<br>");
     }
 
+    $envVarMARIADB_HOST = getenv('MARIADB_HOST');
+    $envVarMARIADB_PASSWORD = getenv('MARIADB_PASSWORD');
+    $envVarMARIADB_USER = getenv('MARIADB_USER');
+    $envVarMARIADB_DB = getenv('MARIADB_DB');
 
     $z = $_POST['num_name'];
     $_SESSION["hdcunt"] = $_POST['num_name'];
     $x = $_SESSION['bsnm'];
 
-    $db = mysqli_connect('localhost', 'root', '', 'online_bus') or die("Could not connect to Database");
+    $db = mysqli_connect( $envVarMARIADB_HOST , $envVarMARIADB_USER, $envVarMARIADB_PASSWORD , $envVarMARIADB_DB) or die("Could not connect to Database");
 
     $querry = "UPDATE bus_details SET seats_available = seats_available - $z WHERE bus_name = '$x'";
     $result = mysqli_query($db, $querry) or die("Could not execute querry" . mysqli_error($db));
